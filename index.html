@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <title>Rêve CI</title>
+      <!-- Meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="Reve ci"/>
+      <link rel="shortcut icon" href="http://144.91.106.116/media/admin-interface/favicon/favicon.png" type="image/x-icon">
+      <script>
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+      </script>
+      <!-- Meta tags -->
+      <!--css Countdowntime-->
+      <link href="css/simplyCountdown.theme.default.css" rel="stylesheet" type="text/css">
+      <!--css Countdowntime-->
+      <!--stylesheets-->
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+      <!--//style sheet end here-->
+      <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+   </head>
+   <body>
+      <div class="imges-position">
+         <div class="slider-couneter">
+            <h1 class="header-w3ls">
+               Rêve Bientôt disponible
+            </h1>
+         </div>
+         <!-- Slideshow 4 -->
+         <div class="slider">
+            <div class="callbacks_container">
+               <ul class="rslides" id="slider4">
+                  <li>
+                     <div class="slider-img one-img">
+                        <div class="absolute"></div>
+                        <div class="slider-info text-center">
+                           <div class="swm-right-w3ls">
+                              <h2> Il reste encore..!</h2>
+                              <div class="music-counter">
+                                 <div class="simply-countdown simply-countdown-one"></div>
+                              </div>
+                              <h3> Pour le moment vous pouvez télécharger notre dossier sur le Covid-19</h3>
+                                 <div class="form-grid-w3ls">
+                                    <p><i class="fa fa-folder-open"></i> Document Covid 19</p>
+                                    <div class="form-control-w3l">
+                                       <a href="./Covid-19-Boîtes à outil.pdf" target="_bank">Cliquer ici</a>
+                                    </div>
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <!-- This is here just to demonstrate the callbacks -->
+            <!-- <ul class="events">
+               <li>Example 4 callback events</li>
+               </ul>-->
+            <div class="clearfix"></div>
+         </div>
+      </div>
+      <div class="copy">
+         <p>&copy; <script>document.write(new Date().getFullYear().toString())</script> Reve.ci</p>
+         </p>
+      </div>
+      <!--js working-->
+      <script src='js/jquery-2.2.3.min.js'></script>
+      <!--//js working--> 
+      <!--responsiveslides banner-->
+      <script src="js/responsiveslides.min.js"></script>
+      <script>
+         // You can also use "$(window).load(function() {"
+         $(function () {
+         	// Slideshow 4
+         	$("#slider4").responsiveSlides({
+         		auto: true,
+         		pager:false,
+         		nav:true ,
+         		speed: 900,
+         		namespace: "callbacks",
+         		before: function () {
+         			$('.events').append("<li>before event fired.</li>");
+         		},
+         		after: function () {
+         			$('.events').append("<li>after event fired.</li>");
+         		}
+         	});
+         
+         });
+      </script>
+      <!--// responsiveslides banner-->	
+      <!--countdowntimer-js-->
+      <script src="js/simplyCountdown.js"></script>
+      <script>
+         /**
+          * WARNING: I set this coundtown to be running until the end of times.
+          * So when you'll init the plugin, follow how it's done in plugin documentation.
+          */
+         var d = new Date(2020, 3, 21);
+         
+           // default example
+           simplyCountdown('.simply-countdown-one', {
+               year: d.getFullYear(),
+               month: d.getMonth() + 1,
+               day: d.getDate()
+           });
+      </script>
+      <!--//countdowntimer-js-->
+   </body>
+</html>
